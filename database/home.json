@@ -32,6 +32,12 @@
             "disabled": true
         },
         {
+            "title": "设计模式",
+            "icon": "https://leexiaop.github.io/mini/resources/img/design.svg",
+            "url": "design",
+            "disabled": true
+        },
+        {
             "title": "webgpu",
             "icon": "https://leexiaop.github.io/mini/resources/img/webgpu.svg",
             "url": "webgpu",
