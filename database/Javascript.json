@@ -1,78 +1,62 @@
 [
     {
-        "label": "前端源码",
-        "title": "前端源码",
+        "label": "源码",
         "items": [
             {
                 "label": "React源码",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "desc": "dadadad",
+                "url": "react"
             },
             {
-                "label": "Vue2源码",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "Vue2源码"
             },
             {
-                "label": "Vue3源码",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "Vue3源码"
             },
             {
-                "label": "Lodash源码",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "Lodash源码"
             },
             {
-                "label": "Antd源码",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "Antd源码"
             }
         ]
     },
     {
-        "label": "学习进阶",
-        "title": "学习进阶",
+        "label": "进阶",
         "items": [
             {
-                "label": "TypeScript学习",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "TypeScript学习"
             },
             {
-                "label": "ArkTs学习",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "ArkTs学习"
             },
             {
-                "label": "golang学习",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "golang学习"
             },
             {
-                "label": "Python学习",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "Python学习"
             }
         ]
     },
     {
-        "label": "实战案例",
-        "title": "实战案例",
+        "label": "实战",
         "items": [
             {
-                "label": "webpack搭建React项目",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "webpack搭建React项目"
             },
             {
-                "label": "webpack搭建Vue项目",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "webpack搭建Vue项目"
             },
             {
-                "label": "webpack搭建Vue项目",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "webpack搭建Vue项目"
             }
         ]
     },
     {
         "label": "其他",
-        "title": "其他",
-        "badgeProps": {},
         "items": [
             {
-                "label": "实用组件",
-                "image": "https://tdesign.gtimg.com/mobile/demos/example2.png"
+                "label": "实用组件"
             }
         ]
     }
