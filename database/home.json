@@ -3,90 +3,90 @@
     "list": [
         {
             "title": "HTML",
-            "icon": "https://leexiaop.github.io/static/mini/img/html.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/html.svg",
             "url": "html"
         },
         {
             "title": "CSS",
-            "icon": "https://leexiaop.github.io/static/mini/img/css.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/css.svg",
             "url": "css"
         },
         {
             "title": "VUE",
-            "icon": "https://leexiaop.github.io/static/mini/img/vue.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/vue.svg",
             "url": "vue"
         },
         {
             "title": "React",
-            "icon": "https://leexiaop.github.io/static/mini/img/react.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/react.svg",
             "url": "react"
         },
         {
             "title": "算法",
-            "icon": "https://leexiaop.github.io/static/mini/img/leetcode.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/leetcode.svg",
             "url": "leetcode"
         },
         {
             "title": "webgl",
-            "icon": "https://leexiaop.github.io/static/mini/img/webgl.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/webgl.svg",
             "url": "webgl",
             "disabled": true
         },
         {
             "title": "webgpu",
-            "icon": "https://leexiaop.github.io/static/mini/img/webgpu.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/webgpu.svg",
             "url": "webgpu",
             "disabled": true
         },
         {
             "title": "JS编程题",
-            "icon": "https://leexiaop.github.io/static/mini/img/code.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/code.svg",
             "url": "jscoding"
         },
         {
             "title": "ThreeJS",
-            "icon": "https://leexiaop.github.io/static/mini/img/threejs.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/threejs.svg",
             "url": "threeJS"
         },
         {
             "title": "CesiumJS",
-            "icon": "https://leexiaop.github.io/static/mini/img/cesium.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/cesium.svg",
             "url": "cesiumJS",
             "disabled": true
         },
         {
             "title": "前端安全",
-            "icon": "https://leexiaop.github.io/static/mini/img/websafe.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/websafe.svg",
             "url": "websafe"
         },
         {
             "title": "前端工程化",
-            "icon": "https://leexiaop.github.io/static/mini/img/webpack.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/webpack.svg",
             "url": "webpack"
         },
         {
             "title": "性能优化",
-            "icon": "https://leexiaop.github.io/static/mini/img/performance.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/performance.svg",
             "url": "performance"
         },
         {
             "title": "TypeScript",
-            "icon": "https://leexiaop.github.io/static/mini/img/typescript.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/typescript.svg",
             "url": "typescript"
         },
         {
             "title": "NodeJS",
-            "icon": "https://leexiaop.github.io/static/mini/img/nodejs.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/nodejs.svg",
             "url": "nodejs"
         },
         {
             "title": "小程序",
-            "icon": "https://leexiaop.github.io/static/mini/img/mini.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/mini.svg",
             "url": "mini"
         },
         {
             "title": "其他",
-            "icon": "https://leexiaop.github.io/static/mini/img/other.svg",
+            "icon": "https://leexiaop.github.io/mini/resources/img/other.svg",
             "url": "other"
         }
     ],
