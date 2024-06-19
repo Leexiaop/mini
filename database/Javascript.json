@@ -4,20 +4,23 @@
         "items": [
             {
                 "label": "React源码",
-                "desc": "dadadad",
                 "url": "react"
             },
             {
-                "label": "Vue2源码"
+                "label": "Vue2源码",
+                "url": "vue2"
             },
             {
-                "label": "Vue3源码"
+                "label": "Vue3源码",
+                "url": "vue3"
             },
             {
-                "label": "Lodash源码"
+                "label": "Lodash源码",
+                "url": "lodash"
             },
             {
-                "label": "Antd源码"
+                "label": "Antd源码",
+                "url": "antd"
             }
         ]
     },
@@ -25,16 +28,20 @@
         "label": "进阶",
         "items": [
             {
-                "label": "TypeScript学习"
+                "label": "TypeScript学习",
+                "url": "typescript"
             },
             {
-                "label": "ArkTs学习"
+                "label": "ArkTs学习",
+                "url": "arkTs"
             },
             {
-                "label": "golang学习"
+                "label": "golang学习",
+                "url": "golang"
             },
             {
-                "label": "Python学习"
+                "label": "Python学习",
+                "url": "python"
             }
         ]
     },
@@ -42,13 +49,8 @@
         "label": "实战",
         "items": [
             {
-                "label": "webpack搭建React项目"
-            },
-            {
-                "label": "webpack搭建Vue项目"
-            },
-            {
-                "label": "webpack搭建Vue项目"
+                "label": "手动搭建项目",
+                "url": "program"
             }
         ]
     },
@@ -56,7 +58,8 @@
         "label": "其他",
         "items": [
             {
-                "label": "实用组件"
+                "label": "实用组件",
+                "url": "components"
             }
         ]
     }
