@@ -324,12 +324,13 @@ console.log(props.location.search)
 传递方式如下：
 
 ```jsx
-<NavLink to={{
+let param = {
     pathname: "/detail2", 
     query: {name: "kobe", age: 30},
     state: {height: 1.98, address: "洛杉矶"},
     search: "?apikey=123"
-  }}>
+  }
+<NavLink to={param}>
   详情2
 </NavLink>
 ```
