@@ -3,22 +3,26 @@
         {
             "title": "HTML",
             "icon": "https://leexiaop.github.io/mini/resources/img/HTML.svg",
-            "url": "html"
+            "url": "html",
+            "disabled": true
         },
         {
             "title": "CSS",
             "icon": "https://leexiaop.github.io/mini/resources/img/css.svg",
-            "url": "css"
+            "url": "css",
+            "disabled": true
         },
         {
             "title": "VUE",
             "icon": "https://leexiaop.github.io/mini/resources/img/vue.svg",
-            "url": "vue"
+            "url": "vue",
+            "disabled": true
         },
         {
             "title": "React",
             "icon": "https://leexiaop.github.io/mini/resources/img/react.svg",
-            "url": "react"
+            "url": "react",
+            "disabled": true
         },
         {
             "title": "算法",
@@ -61,37 +65,44 @@
         {
             "title": "前端安全",
             "icon": "https://leexiaop.github.io/mini/resources/img/websafe.svg",
-            "url": "websafe"
+            "url": "websafe",
+            "disabled": true
         },
         {
             "title": "前端工程化",
             "icon": "https://leexiaop.github.io/mini/resources/img/webpack.svg",
-            "url": "webpack"
+            "url": "webpack",
+            "disabled": true
         },
         {
             "title": "性能优化",
             "icon": "https://leexiaop.github.io/mini/resources/img/performance.svg",
-            "url": "performance"
+            "url": "performance",
+            "disabled": true
         },
         {
             "title": "TypeScript",
             "icon": "https://leexiaop.github.io/mini/resources/img/typescript.svg",
-            "url": "typescript"
+            "url": "typescript",
+            "disabled": true
         },
         {
             "title": "NodeJS",
             "icon": "https://leexiaop.github.io/mini/resources/img/nodejs.svg",
-            "url": "nodejs"
+            "url": "nodejs",
+            "disabled": true
         },
         {
             "title": "小程序",
             "icon": "https://leexiaop.github.io/mini/resources/img/mini.svg",
-            "url": "mini"
+            "url": "mini",
+            "disabled": true
         },
         {
             "title": "其他",
             "icon": "https://leexiaop.github.io/mini/resources/img/other.svg",
-            "url": "other"
+            "url": "other",
+            "disabled": true
         }
     ],
     "swiperList": [

@@ -12,7 +12,8 @@
             },
             {
                 "label": "Vue3源码",
-                "url": "vue3"
+                "url": "vue3",
+                "disabled": true
             },
             {
                 "label": "Lodash源码",
@@ -20,7 +21,8 @@
             },
             {
                 "label": "Antd源码",
-                "url": "antd"
+                "url": "antd",
+                "disabled": true
             }
         ]
     },
@@ -29,19 +31,22 @@
         "items": [
             {
                 "label": "TypeScript学习",
-                "url": "typescript"
+                "url": "typescript",
+                "disabled": true
             },
             {
                 "label": "ArkTs学习",
-                "url": "arkTs"
+                "url": "homonyOS"
             },
             {
                 "label": "golang学习",
-                "url": "golang"
+                "url": "golang",
+                "disabled": true
             },
             {
                 "label": "Python学习",
-                "url": "python"
+                "url": "python",
+                "disabled": true
             }
         ]
     },
@@ -50,7 +55,8 @@
         "items": [
             {
                 "label": "手动搭建项目",
-                "url": "program"
+                "url": "program",
+                 "disabled": true
             }
         ]
     },
