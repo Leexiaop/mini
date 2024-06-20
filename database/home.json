@@ -9,20 +9,22 @@
         {
             "title": "CSS",
             "icon": "https://leexiaop.github.io/mini/resources/img/css.svg",
-            "url": "css",
-            "disabled": true
+            "url": "css"
+        },
+        {
+            "title": "Javascript基础",
+            "icon": "https://leexiaop.github.io/mini/resources/img/js.svg",
+            "url": "js"
         },
         {
             "title": "VUE",
             "icon": "https://leexiaop.github.io/mini/resources/img/vue.svg",
-            "url": "vue",
-            "disabled": true
+            "url": "vue"
         },
         {
             "title": "React",
             "icon": "https://leexiaop.github.io/mini/resources/img/react.svg",
-            "url": "react",
-            "disabled": true
+            "url": "react"
         },
         {
             "title": "算法",
@@ -63,16 +65,14 @@
             "disabled": true
         },
         {
-            "title": "前端安全",
+            "title": "http及前端安全",
             "icon": "https://leexiaop.github.io/mini/resources/img/websafe.svg",
-            "url": "websafe",
-            "disabled": true
+            "url": "http"
         },
         {
             "title": "前端工程化",
             "icon": "https://leexiaop.github.io/mini/resources/img/webpack.svg",
-            "url": "webpack",
-            "disabled": true
+            "url": "webpack"
         },
         {
             "title": "性能优化",
@@ -83,20 +83,17 @@
         {
             "title": "TypeScript",
             "icon": "https://leexiaop.github.io/mini/resources/img/typescript.svg",
-            "url": "typescript",
-            "disabled": true
+            "url": "typescript"
         },
         {
             "title": "NodeJS",
             "icon": "https://leexiaop.github.io/mini/resources/img/nodejs.svg",
-            "url": "nodejs",
-            "disabled": true
+            "url": "nodejs"
         },
         {
             "title": "小程序",
             "icon": "https://leexiaop.github.io/mini/resources/img/mini.svg",
-            "url": "mini",
-            "disabled": true
+            "url": "program"
         },
         {
             "title": "其他",
