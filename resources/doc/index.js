@@ -29,7 +29,7 @@ const fileDisplay = (url, cb) => {
     });
 }
 // 测试代码
-fileDisplay('./react', (arr) => {
+fileDisplay('./git', (arr) => {
     console.log(arr)
 })
 module.exports = fileDisplay;

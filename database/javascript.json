@@ -55,8 +55,7 @@
         "items": [
             {
                 "label": "手动搭建项目",
-                "url": "program",
-                 "disabled": true
+                "url": "project"
             }
         ]
     },

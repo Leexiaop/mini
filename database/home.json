@@ -3,8 +3,7 @@
         {
             "title": "HTML",
             "icon": "https://leexiaop.github.io/mini/resources/img/HTML.svg",
-            "url": "html",
-            "disabled": true
+            "url": "html"
         },
         {
             "title": "CSS",
@@ -77,8 +76,12 @@
         {
             "title": "性能优化",
             "icon": "https://leexiaop.github.io/mini/resources/img/performance.svg",
-            "url": "performance",
-            "disabled": true
+            "url": "performance"
+        },
+        {
+            "title": "git",
+            "icon": "https://leexiaop.github.io/mini/resources/img/git.svg",
+            "url": "git"
         },
         {
             "title": "TypeScript",
@@ -98,8 +101,7 @@
         {
             "title": "其他",
             "icon": "https://leexiaop.github.io/mini/resources/img/other.svg",
-            "url": "other",
-            "disabled": true
+            "url": "other"
         }
     ],
     "swiperList": [
