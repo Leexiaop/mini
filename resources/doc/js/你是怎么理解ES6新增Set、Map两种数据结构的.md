@@ -369,7 +369,7 @@ console.log(weakSet) // 报错
 let obj1={name:1}
 let obj2={name:1}
 let ws=new WeakSet([obj1,obj2]); 
-console.log(ws) //WeakSet {{…}, {…}}
+console.log(ws)
 ```
 
 `WeakSet `里面的引用只要在外部消失，它在 `WeakSet `里面的引用就会自动消失
