@@ -8,5 +8,6 @@
     "说说webpack中常见的Plugin",
     "说说webpack proxy工作原理",
     "与webpack类似的工具还有哪些",
-    "说说你对webpack的理解"
+    "说说你对webpack的理解",
+    "npm包的安装机制"
 ]
