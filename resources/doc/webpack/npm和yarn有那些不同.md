@@ -9,3 +9,4 @@
 5. package-lock.json和yarn.lock文件结构上大体相同，但是yarn.lock文件并没有采用json结构，而是采用了一个自定义的标记格式，具有更高的可读性。
 6. 相比于npm,yarn.lock文件中子依赖的版本号是不固定的。也就是说单独的yarn.lock文件并不能确定node_modules的目录结构，需要和package.json相结合。
 7. yarn采用的是prefer-online模式，优先使用网络资源，当网络请求失败，才去缓存请求数据。
+8. yarn cache dir命令查看yarn缓存的文件也和npm不一样
