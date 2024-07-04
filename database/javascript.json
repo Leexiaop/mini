@@ -21,8 +21,7 @@
             },
             {
                 "label": "Antd源码",
-                "url": "antd",
-                "disabled": true
+                "url": "antd"
             }
         ]
     },
