@@ -155,6 +155,7 @@ cp.execSync(
     stdio: 'inherit',
   }
 );
+handleExit();
 ```
 
 - 首先开启进程，通过git status命令来检查一下，当前工作区，有没有更改过的记录，如果有，那么就输出提示信息，并且退出进程。
@@ -162,6 +163,7 @@ cp.execSync(
 - 遍历packagePathsByName,使得package.json能够得到重新组织，并且添加file新的字段
 - 将重新组织好的package.json再重新回写到每个包中。这样做的目的，就是为了替代在本地packages下所有包中package.json的本地以来。
 - 然后通过开启子进程，运行命令npm pack打包项目中的包，并且拼接node执行create-react-app命令的路径，执行node create-react-app命令。正式进入到创建环节。
+- 执行完成后，调用handleExist()退出进程。
 
 所以到目前为止，只是创建项目的前奏，也是准备工作，接下开就是开启create-react-app命令真正的开始。
 
