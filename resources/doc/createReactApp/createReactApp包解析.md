@@ -735,4 +735,177 @@ function run(
 }
 ```
 
-这个函数看起来貌似有点难度哈，貌似请求了挺多了东西。我们一一来看。首先第一个promise.all(),通过getInstallPackage和getTemplateInstallPackage函数请求了点东西，看名字好像是都和包有关，
+这个函数看起来貌似有点难度哈，貌似请求了挺多了东西。我们一一来看。首先第一个promise.all(),通过getInstallPackage和getTemplateInstallPackage函数请求了点东西，看名字好像是都和包有关，是的，这里是根据react-script的版本，还有根路径，模版中的包信息，进行同一处理，所以这里，我们就要开始关注另外的俩个包cra-template和react-script。接下来的一个promise.all().就是开始处理俩个包中的依赖项，然后调用install方法,来安装工程中所用到的依赖。
+
+#### getInstallPackage方法
+
+```js
+function getInstallPackage(version, originalDirectory) {
+  let packageToInstall = 'react-scripts';
+  const validSemver = semver.valid(version);
+  if (validSemver) {
+    packageToInstall += `@${validSemver}`;
+  } else if (version) {
+    if (version[0] === '@' && !version.includes('/')) {
+      packageToInstall += version;
+    } else if (version.match(/^file:/)) {
+      packageToInstall = `file:${path.resolve(
+        originalDirectory,
+        version.match(/^file:(.*)?$/)[1]
+      )}`;
+    } else {
+      // for tar.gz or alternative paths
+      packageToInstall = version;
+    }
+  }
+
+  const scriptsToWarn = [
+    {
+      name: 'react-scripts-ts',
+      message: chalk.yellow(
+        `The react-scripts-ts package is deprecated. TypeScript is now supported natively in Create React App. You can use the ${chalk.green(
+          '--template typescript'
+        )} option instead when generating your app to include TypeScript support. Would you like to continue using react-scripts-ts?`
+      ),
+    },
+  ];
+
+  for (const script of scriptsToWarn) {
+    if (packageToInstall.startsWith(script.name)) {
+      return prompts({
+        type: 'confirm',
+        name: 'useScript',
+        message: script.message,
+        initial: false,
+      }).then(answer => {
+        if (!answer.useScript) {
+          process.exit(0);
+        }
+
+        return packageToInstall;
+      });
+    }
+  }
+
+  return Promise.resolve(packageToInstall);
+}
+
+```
+
+#### getTemplateInstallPackage函数
+```js
+
+function getTemplateInstallPackage(template, originalDirectory) {
+  let templateToInstall = 'cra-template';
+  if (template) {
+    if (template.match(/^file:/)) {
+      templateToInstall = `file:${path.resolve(
+        originalDirectory,
+        template.match(/^file:(.*)?$/)[1]
+      )}`;
+    } else if (
+      template.includes('://') ||
+      template.match(/^.+\.(tgz|tar\.gz)$/)
+    ) {
+      // for tar.gz or alternative paths
+      templateToInstall = template;
+    } else {
+      // Add prefix 'cra-template-' to non-prefixed templates, leaving any
+      // @scope/ and @version intact.
+      const packageMatch = template.match(/^(@[^/]+\/)?([^@]+)?(@.+)?$/);
+      const scope = packageMatch[1] || '';
+      const templateName = packageMatch[2] || '';
+      const version = packageMatch[3] || '';
+
+      if (
+        templateName === templateToInstall ||
+        templateName.startsWith(`${templateToInstall}-`)
+      ) {
+        // Covers:
+        // - cra-template
+        // - @SCOPE/cra-template
+        // - cra-template-NAME
+        // - @SCOPE/cra-template-NAME
+        templateToInstall = `${scope}${templateName}${version}`;
+      } else if (version && !scope && !templateName) {
+        // Covers using @SCOPE only
+        templateToInstall = `${version}/${templateToInstall}`;
+      } else {
+        // Covers templates without the `cra-template` prefix:
+        // - NAME
+        // - @SCOPE/NAME
+        templateToInstall = `${scope}${templateToInstall}-${templateName}${version}`;
+      }
+    }
+  }
+
+  return Promise.resolve(templateToInstall);
+}
+```
+#### install函数
+```js
+function install(root, useYarn, usePnp, dependencies, verbose, isOnline) {
+  return new Promise((resolve, reject) => {
+    let command;
+    let args;
+    if (useYarn) {
+      command = 'yarnpkg';
+      args = ['add', '--exact'];
+      if (!isOnline) {
+        args.push('--offline');
+      }
+      if (usePnp) {
+        args.push('--enable-pnp');
+      }
+      [].push.apply(args, dependencies);
+
+      // Explicitly set cwd() to work around issues like
+      // https://github.com/facebook/create-react-app/issues/3326.
+      // Unfortunately we can only do this for Yarn because npm support for
+      // equivalent --prefix flag doesn't help with this issue.
+      // This is why for npm, we run checkThatNpmCanReadCwd() early instead.
+      args.push('--cwd');
+      args.push(root);
+
+      if (!isOnline) {
+        console.log(chalk.yellow('You appear to be offline.'));
+        console.log(chalk.yellow('Falling back to the local Yarn cache.'));
+        console.log();
+      }
+    } else {
+      command = 'npm';
+      args = [
+        'install',
+        '--no-audit', // https://github.com/facebook/create-react-app/issues/11174
+        '--save',
+        '--save-exact',
+        '--loglevel',
+        'error',
+      ].concat(dependencies);
+
+      if (usePnp) {
+        console.log(chalk.yellow("NPM doesn't support PnP."));
+        console.log(chalk.yellow('Falling back to the regular installs.'));
+        console.log();
+      }
+    }
+
+    if (verbose) {
+      args.push('--verbose');
+    }
+
+    const child = spawn(command, args, { stdio: 'inherit' });
+    child.on('close', code => {
+      if (code !== 0) {
+        reject({
+          command: `${command} ${args.join(' ')}`,
+        });
+        return;
+      }
+      resolve();
+    });
+  });
+}
+```
+
+阅读代码，这里做的貌似就是安装依赖，和函数名的作用一样。至此，创建的项目基本结束，然后就是其他的一些校验工具函数。接续分析。
